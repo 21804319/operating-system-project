@@ -16,6 +16,10 @@ struct process
 };
 
 void FirstComeFirstServe(struct process *, int);
+struct process *frontInsert(struct process *, int, int, int);
+struct process *backInsert(struct process *, int, int, int);
+struct process *afterInsert(struct process *, int, int, int);
+void set_nth_process_waitingTime(struct process *, int, float);
 
 int main()
 {
