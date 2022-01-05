@@ -75,6 +75,46 @@ int main()
         }
     }
 
-    cout << "Hello Everyone, Brother Shaggi here again\n";
+    do
+    {
+        cout << "*******CPU SCHEDULER OPTIONS********\n";
+        cout << "1. None\n";
+        cout << "2. First Come, First Served Scheduling\n";
+        cout << "3. Shortest-Job-First Scheduling\n";
+        cout << "4. Priority Scheduling\n";
+        cout << "5. Round-Robin Scheduling\n";
+        cout << "6. Show Result\n";
+        cout << "7. End Program\n\n";
+        cout << "Please select an option to continue";
+        cin >> v;
+
+        switch (v)
+        {
+        case 1:
+            cout << "You have %v processes";
+
+            for (temp = processor; temp != NULL; temp = temp->next)
+            {
+                cin >>
+            }
+
+            break;
+
+        case 2:
+            cout << "Shortest Job First Scheduling Method selected\n";
+
+        case 3:
+            cout << "Pririty Scheduling Method selected\n";
+
+        case 4:
+            cout << "Round-Robin Scheduling Method selected\n";
+
+        default:
+            cout << "Please select a valid option\n";
+            getchR();
+            break;
+        }
+    } while (v != 5);
+
     return 0;
 }
