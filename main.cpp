@@ -50,6 +50,31 @@ int main()
         cout << "No option argument selected";
     cin >> index;
 
+    if (!error)
+        fp = fopen(fileInput, "z");
+
+    if ((!fp))
+    {
+        cout << "No file has been selected for Input";
+    }
+
+    if (!error)
+    {
+
+        while (fgets(str, sizeof str, fp))
+        {
+            char *p = strchr(str, '\n');
+            if (p)
+                *p = 0;
+
+            if (sscan(str "%d:%d:%d", &a, &b, &c) == 3)
+            {
+                processor = insertBack(processor, a, b, c);
+                Sizelist++;
+            }
+        }
+    }
+
     cout << "Hello Everyone, Brother Shaggi here again\n";
     return 0;
 }
