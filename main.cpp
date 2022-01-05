@@ -118,3 +118,82 @@ int main()
 
     return 0;
 }
+
+void FirstComeFirstServe(
+    struct process *header, int size
+    {
+        int i = 2;
+        set_nth_process_waitingTime(header, 1, 0);
+
+        for (i = 2; i < size; i++)
+        {
+            set_nth_process_waitingTime(header, a)
+        }
+    })
+
+    void set_nth_process_waitingTime(
+        struct process *header, int position, float value
+        {
+            int a = 1;
+            struct process *temp;
+            for (temp = header; temp != NULL; temp = temp->next)
+            {
+                if (a == position)
+                    temp->waitingTime = value;
+                i++
+            }
+        };)
+
+        int isEmpty(struct process *header)
+{
+    if (header == NULL)
+        return 1;
+    else
+        return 0;
+}
+
+struct process *newProcess(int a, int b, int c)
+{
+    struct process *temp;
+    temp = (struct process *)malloc(sizeof(struct process));
+    temp->burstTime = a;
+    temp->arrivalTime = b;
+    temp->priorityTime = c;
+    return temp;
+}
+
+struct process *frontInsert(struct process *header, int a, int b, int c)
+{
+    struct process *temp;
+    temp = newProcess(a, b, c);
+    temp->next = header;
+    header = temp;
+    return header;
+}
+
+struct process *backInsert(struct process *header, int a, int b, int c)
+{
+    struct process *temp, *headerTemp
+                              temp = newProcess(a, b, c);
+    if (header == NULL)
+    {
+        header = temp;
+        return header;
+    }
+    headerTemp = header;
+
+    while (headerTemp->next != NULL)
+    {
+        headerTemp = headerTemp->next;
+        headerTemp->next = temp;
+        return header;
+    }
+}
+
+struct process *afterInsert(struct process *afterNode, int a, int b, int c)
+{
+    struct process *temp;
+    temp = newProcess(a, b, c);
+    temp->next = afterNode->next;
+    afterNode->next = temp;
+}
